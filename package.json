@@ -17,6 +17,10 @@
     "express"
   ],
   "author": "Austin Peterson",
+  "contributors": [
+    "Austin Peterson",
+    "Sophy Hok"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/theskillwithin/node-mysql/issues"
