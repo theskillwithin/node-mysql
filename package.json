@@ -4,6 +4,7 @@
   "description": "example project using docker node express mysql",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,5 +26,11 @@
   "bugs": {
     "url": "https://github.com/theskillwithin/node-mysql/issues"
   },
-  "homepage": "https://github.com/theskillwithin/node-mysql#readme"
+  "homepage": "https://github.com/theskillwithin/node-mysql#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
 }
