@@ -1,0 +1,25 @@
+{
+  "name": "node-mysql",
+  "version": "1.0.0",
+  "description": "example project using docker node express mysql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theskillwithin/node-mysql.git"
+  },
+  "keywords": [
+    "node",
+    "mysql",
+    "docker",
+    "express"
+  ],
+  "author": "Austin Peterson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theskillwithin/node-mysql/issues"
+  },
+  "homepage": "https://github.com/theskillwithin/node-mysql#readme"
+}
