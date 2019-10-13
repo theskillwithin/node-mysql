@@ -4,8 +4,8 @@ services:
     build: .
     command: npm run dev
     volumes:
-      - /:/usr/app/
-      - /usr/app/node_modules
+      - .:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
     ports:
       - "3000:3000"
     depends_on:
@@ -36,3 +36,4 @@ services:
 # Names our volume
 volumes:
   mydb:
+  node_modules:
