@@ -6,6 +6,7 @@ const apiController = require("../controllers/apiController");
 router.get("/", apiController.index);
 
 router.get("/users", apiController.users);
+router.get("/add-user", apiController.addUser);
 
 /*
   API

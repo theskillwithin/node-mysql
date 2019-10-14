@@ -5,6 +5,17 @@ exports.index = (req, res) => {
 };
 
 exports.users = async (req, res) => {
-  const users = await User.query();
+  const users = await User.query().catch((err) =>{
+    res.json(err)
+  });
+  res.json(users);
+};
+
+exports.addUser = async (req, res) => {
+  const users = await User.query().insert({
+    id: 1,
+    username: "theskillwithin",
+    email: "email@email.com",
+  });
   res.json(users);
 };
