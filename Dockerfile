@@ -13,3 +13,4 @@ EXPOSE 3000
 EXPOSE 3306
 
 CMD [ "node", "server.js" ]
+

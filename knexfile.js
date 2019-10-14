@@ -2,11 +2,15 @@ module.exports = {
   development: {
     client: "mysql",
     connection: {
-      host: "127.0.0.1",
+      // docker ps
+      // docker exec -it IDofWeb /bin/bash
+      // ip route show --> set to host
+      host: "172.19.0.1",
       port: 3306,
-      user: "user",
+      user: "root",
       password: "password",
       database: "db",
+      // socket: '/var/run/mysqld/mysqlx.sock',
     },
   },
 };
