@@ -13,6 +13,7 @@ router.get("/", apiController.index);
 
 router.get("/users", catchErrors(apiController.users));
 router.get("/add-user", apiController.addUser);
+router.get("/delete-user/:id", apiController.deleteUser);
 
 /*
   API
