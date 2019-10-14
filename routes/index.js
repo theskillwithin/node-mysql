@@ -14,3 +14,4 @@ router.get("/", apiController.index);
 // router.post('/api/stores/:id/heart', catchErrors(apiController.heartStore));
 
 module.exports = router;
+ 
