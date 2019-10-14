@@ -5,6 +5,8 @@ const apiController = require("../controllers/apiController.js");
 
 router.get("/", apiController.index);
 
+router.get("/users", apiController.users);
+
 /*
   API
 */
@@ -14,4 +16,3 @@ router.get("/", apiController.index);
 // router.post('/api/stores/:id/heart', catchErrors(apiController.heartStore));
 
 module.exports = router;
- 
