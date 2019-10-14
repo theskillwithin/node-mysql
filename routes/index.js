@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 // const { catchErrors } = require('../handlers/errorHandlers');
-const apiController = require("../controllers/apiController.js");
+const apiController = require("../controllers/apiController");
 
 router.get("/", apiController.index);
 
