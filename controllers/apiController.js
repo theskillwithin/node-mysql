@@ -1,7 +1,15 @@
 const User = require("../models/User");
+const Role = require("../models/Role");
 
 exports.index = (req, res) => {
   res.send("Hello World from apiController");
+};
+
+const getRoleIDFromRole = async role => {
+  const id = await Role.query()
+    .findOne({ role_name: role })
+    .pluck("id");
+  return id;
 };
 
 exports.users = async (req, res) => {
@@ -10,15 +18,14 @@ exports.users = async (req, res) => {
 };
 
 exports.addUser = async (req, res) => {
+  const id = await getRoleIDFromRole(req.query.role);
   const users = await User.query().insert({
-    id: 2,
-    username: "theskillwithin2",
-    email: "emai2l@ema2il.com",
-    role_id: 5,
+    username: req.query.username,
+    email: req.query.email,
+    role_id: id,
   });
   res.json(users);
 };
-
 
 exports.deleteUser = async (req, res) => {
   const users = await User.query().deleteById(req.params.id);

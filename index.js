@@ -18,7 +18,7 @@ const app = express();
 
 app.use(bodyParser.json())
 
-// app.set('json spaces', 2);
+app.set('json spaces', 2);
 
 app.use("/", routes);
 
