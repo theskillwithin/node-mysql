@@ -29,7 +29,10 @@
   },
   "homepage": "https://github.com/theskillwithin/node-mysql#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "knex": "^0.19.5",
+    "mysql2": "^1.7.0",
+    "objection": "^1.6.11"
   },
   "devDependencies": {
     "nodemon": "^1.19.3"
