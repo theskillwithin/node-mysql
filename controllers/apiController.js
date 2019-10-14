@@ -5,9 +5,7 @@ exports.index = (req, res) => {
 };
 
 exports.users = async (req, res) => {
-  const users = await User.query().catch((err) =>{
-    res.json(err)
-  });
+  const users = await User.query();
   res.json(users);
 };
 
