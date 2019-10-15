@@ -1,6 +1,6 @@
 exports.up = function(knex) {
   return knex.schema.table("users", table => {
-    table.timestamps(false, true);
+    table.timestamps(true, true);
   });
 };
 

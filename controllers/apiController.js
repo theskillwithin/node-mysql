@@ -27,6 +27,18 @@ exports.addUser = async (req, res) => {
   res.json(users);
 };
 
+exports.updateUser = async (req, res) => {
+  const id = await getRoleIDFromRole(req.query.role);
+  const usrUpdate = await User.query()
+    .findById(req.params.id)
+    .patch({
+      username: req.query.username,
+      email: req.query.email,
+      role_id: id,
+    });
+  res.json(usrUpdate);
+};
+
 exports.deleteUser = async (req, res) => {
   const users = await User.query().deleteById(req.params.id);
   res.json(users);

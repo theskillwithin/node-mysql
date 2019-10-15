@@ -12,15 +12,8 @@ catchErrors = (fn) => {
 router.get("/", apiController.index);
 
 router.get("/users", catchErrors(apiController.users));
-router.get("/add-user", apiController.addUser);
-router.get("/delete-user/:id", apiController.deleteUser);
-
-/*
-  API
-*/
-
-// router.get('/api/search', catchErrors(apiController.searchStores));
-// router.get('/api/stores/near', catchErrors(apiController.mapStores));
-// router.post('/api/stores/:id/heart', catchErrors(apiController.heartStore));
+router.post("/add-user", catchErrors(apiController.addUser));
+router.post("/delete-user/:id", catchErrors(apiController.deleteUser));
+router.put("/update-user/:id", catchErrors(apiController.updateUser));
 
 module.exports = router;
