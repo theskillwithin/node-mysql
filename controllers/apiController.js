@@ -31,7 +31,7 @@ exports.updateUser = async (req, res) => {
   const id = await getRoleIDFromRole(req.query.role);
   const usrUpdate = await User.query()
     .findById(req.params.id)
-    .patch({
+    .update({
       username: req.query.username,
       email: req.query.email,
       role_id: id,
