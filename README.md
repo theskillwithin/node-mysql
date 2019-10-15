@@ -2,7 +2,7 @@
 
 docker node express mysql
 
-steps:
+# steps:
 
 ```
 npm i
@@ -16,7 +16,7 @@ docker-compose up
 get mysql client `brew install mysql`
 globally install knex `npm install knex -g`
 
-(if having problems connecting to db with knex or inside app):
+# (if having problems connecting to db with knex or inside app):
 
 ```
 mysql -h127.0.0.1 -uroot -ppassword
