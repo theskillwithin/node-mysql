@@ -44,3 +44,9 @@ default via 172.19.0.1 dev eth0
 ```
 
 in ip route show it looks like `172.19.0.1` is our ip to the outside world. place this ip in the host ie (`host: process.env.IS_DOCKER ? "172.19.0.1" : "127.0.0.1",`)
+
+
+
+# Mirgrate DB
+
+run `knex migrate:latest` and `knex seed:run`
