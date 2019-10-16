@@ -2,9 +2,6 @@ module.exports = {
   development: {
     client: "mysql",
     connection: {
-      // docker ps
-      // docker exec -it IDofWeb /bin/bash
-      // ip route show --> set to host
       host: process.env.IS_DOCKER ? "mysql" : "127.0.0.1",
       port: 3306,
       user: "root",
