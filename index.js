@@ -1,8 +1,8 @@
-const Knex = require('knex');
+const Knex = require("knex");
 const express = require("express");
-const bodyParser = require('body-parser');
+const bodyParser = require("body-parser");
 const knexConfig = require("./knexfile");
-const { Model } = require('objection');
+const { Model } = require("objection");
 
 const port = 3000;
 const routes = require("./routes/index");
@@ -16,9 +16,9 @@ Model.knex(knex);
 
 const app = express();
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
-app.set('json spaces', 2);
+app.set("json spaces", 2);
 
 app.use("/", routes);
 
@@ -29,10 +29,14 @@ app.use("/", routes);
 //       recipe for a better handler: http://vincit.github.io/objection.js/#error-handling
 app.use((err, req, res, next) => {
   if (err) {
-    res.status(err.statusCode || err.status || 500).send(err.data || err.message || {});
+    res
+      .status(err.statusCode || err.status || 500)
+      .send(err.data || err.message || {});
   } else {
     next();
   }
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+module.exports = app;
