@@ -4,7 +4,8 @@ const bodyParser = require("body-parser");
 const knexConfig = require("./knexfile");
 const { Model } = require("objection");
 
-const port = 3000;
+const port = process.env.TEST ? 3001 : 3000;
+
 const routes = require("./routes/index");
 
 const knex = Knex(knexConfig.development);
@@ -17,8 +18,9 @@ Model.knex(knex);
 const app = express();
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
-app.set("json spaces", 2);
+// app.set("json spaces", 2);
 
 app.use("/", routes);
 

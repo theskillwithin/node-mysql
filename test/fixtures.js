@@ -1,7 +1,7 @@
 const user = {
-  username: "theskillwithin",
-  email: "austin@test.com",
-  role: "Admin",
+  "username": "theskillwithin",
+  "email": "austin@test.com",
+  "role": "Admin",
 };
 
 module.exports = {

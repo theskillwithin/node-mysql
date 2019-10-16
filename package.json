@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "dev": "nodemon index.js",
-    "test": "NODE_ENV=test mocha",
+    "test": "NODE_ENV=test TEST=true mocha",
     "resetdb": "node test/create_test_db.js"
   },
   "repository": {

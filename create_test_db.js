@@ -17,5 +17,7 @@ con.connect(function(err) {
   con.query("CREATE DATABASE testdb", function(err, result) {
     if (err) throw err;
     console.log("Database created");
+    con.end();
+    process.exit();
   });
 });

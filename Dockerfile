@@ -12,5 +12,5 @@ COPY . .
 EXPOSE 3000
 EXPOSE 3306
 
-CMD [ "node", "server.js" ]
+# CMD [ "node", "server.js" ]
 
