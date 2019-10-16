@@ -5,7 +5,7 @@ module.exports = {
       // docker ps
       // docker exec -it IDofWeb /bin/bash
       // ip route show --> set to host
-      host: process.env.IS_DOCKER ? "172.19.0.1" : "127.0.0.1",
+      host: process.env.IS_DOCKER ? "mysql" : "127.0.0.1",
       port: 3306,
       user: "root",
       password: "password",

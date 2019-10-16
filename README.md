@@ -29,22 +29,8 @@ Query OK, 0 rows affected (0.01 sec)
 mysql> SELECT plugin FROM mysql.user WHERE User = 'root';
 ```
 
+
 notice the knexfile.js (config that lets knex and objection app connect to db);
-
-if getting ECONNREFUSED prob have to change the host ip for IS_DOCKER
-
-run `docker ps` get container id for node-mysql_web
-
-`docker exec -it CONTAINER_ID_HERE /bin/bash`
-
-```
-root@50f5748fb339:/usr/src/app# ip route show
-default via 172.19.0.1 dev eth0
-172.19.0.0/16 dev eth0 proto kernel scope link src 172.19.0.3
-```
-
-in ip route show it looks like `172.19.0.1` is our ip to the outside world. place this ip in the host ie (`host: process.env.IS_DOCKER ? "172.19.0.1" : "127.0.0.1",`)
-
 
 
 # Mirgrate DB
