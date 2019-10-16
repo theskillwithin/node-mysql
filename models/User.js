@@ -1,7 +1,7 @@
 const { Model } = require("objection");
 const Role = require("./Role");
 const knexfile = require('../knexfile');
-const knex = require('knex')(knexfile.development);
+const knex = require('knex')(process.env.test ? knexfile.test : knexfile.development);
 
 class User extends Model {
   $beforeUpdate() {

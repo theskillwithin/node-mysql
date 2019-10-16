@@ -8,7 +8,7 @@ const port = process.env.TEST ? 3001 : 3000;
 
 const routes = require("./routes/index");
 
-const knex = Knex(knexConfig.development);
+const knex = Knex(process.env.test ? knexConfig.test : knexConfig.development);
 
 // Bind all Models to a knex instance. If you only have one database in
 // your server this is all you have to do. For multi database systems, see
@@ -18,9 +18,8 @@ Model.knex(knex);
 const app = express();
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
 
-// app.set("json spaces", 2);
+app.set("json spaces", 2);
 
 app.use("/", routes);
 
