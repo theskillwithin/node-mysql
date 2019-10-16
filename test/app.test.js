@@ -34,8 +34,8 @@ describe("CRUD", () => {
 
   it("Creates a user", done => {
     request(app)
-      .post("/add-user")
-      .send(fixtures.user)
+      .post("/add-user?username=test&email=test&role=Admin")
+      // .send(fixtures.user)
       .set("Accept", "application/json")
       .expect("Content-Type", /json/)
       .expect(200)
